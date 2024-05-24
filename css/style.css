@@ -6,82 +6,99 @@
     box-sizing: border-box;
 }
 
-/* Estilos para pantallas pequeñas */
-@media (max-width: 600px) {
-    header {
-        font-size: 1.2em;
-    }
-}
-/* Estilos para pantallas grandes */
-@media (min-width: 601px) {
-    header {
-        font-size: 2em;
-    }
-}
-.header-content {
-    display: flex;
-    /* Utiliza flexbox para alinear los elementos horizontalmente */
-    align-items: center;
-    /* Alinea los elementos verticalmente en el centro */
-}
-
+/* Estilos generales */
 header {
-   
     background-image: linear-gradient(to right, #ffffff, #000000); /* Degradado inicial */
     transition: background-image 1s ease; /* Transición suave entre degradados */
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 40%;
+    padding: 1em 0; /* Añade un poco de padding */
+    text-align: center;
+}
 
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Estilos para la imagen en el encabezado */
 .logo img {
-    width: 6em;
-    /* Tamaño de la imagen */
+    width: 6em; /* Tamaño de la imagen */
     height: auto;
     margin: 1em;
-    /* Espacio entre la imagen y el texto */
-    border-radius:50% ;
+    border-radius: 50%;
 }
 
 /* Estilos para la barra de navegación */
 nav ul {
-    list-style-type: none;
-    /* Quita los puntos de la lista */
+    list-style-type: none; /* Quita los puntos de la lista */
     padding: 0;
-    /* Elimina el relleno */
-    margin-left: 150px;
+    margin: 1em 0;
 }
 
 nav ul li {
-    display: inline-block;
-    /* Alinea los elementos de la lista horizontalmente */
-    margin-right: 4em;
-    /* Espacio entre los elementos de la lista */
-    font-size: 25px;
+    display: inline-block; /* Alinea los elementos de la lista horizontalmente */
+    margin: 0.5em;
 }
 
 nav ul li a {
-    text-decoration: none;
-    /* Quita el subrayado predeterminado de los enlaces */
-    color: #000;
-    /* Color de texto predeterminado */
-    padding: 5px 10px;
-    /* Espaciado interno */
-    border-radius: 5px;
-    /* Bordes redondeados */
+    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+    color: #000; /* Color de texto predeterminado */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Ajusta el tamaño del texto */
 }
 
 nav ul li a:hover {
-    background-color: #2D4B73;
-    /* Cambia el color de fondo cuando el mouse está encima */
-    color: #fff;
-    /* Cambia el color del texto cuando el mouse está encima */
+    background-color: #2D4B73; /* Cambia el color de fondo cuando el mouse está encima */
+    color: #fff; /* Cambia el color del texto cuando el mouse está encima */
 }
-.random-color{
+
+.random-color {
     transition: color 0.18s ease; /* Transición suave entre colores */
     text-align: center;
 }
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    header {
+        font-size: 1.2em;
+        border-bottom-left-radius: 30%;
+        border-bottom-right-radius: 30%;
+    }
+    .header-content {
+        flex-direction: column;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 601px) {
+    header {
+        font-size: 2em;
+        text-align: left;
+    }
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 1em;
+    }
+}
+
 
 .SobreNosotros {
     display: flex;
