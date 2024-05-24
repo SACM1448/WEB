@@ -1,0 +1,130 @@
+
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    header {
+        font-size: 1.2em;
+    }
+}
+/* Estilos para pantallas grandes */
+@media (min-width: 601px) {
+    header {
+        font-size: 2em;
+    }
+}
+.header-content {
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos horizontalmente */
+    align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
+}
+
+header {
+   
+    background-image: linear-gradient(to right, #ffffff, #000000); /* Degradado inicial */
+    transition: background-image 1s ease; /* Transición suave entre degradados */
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 40%;
+
+}
+
+/* Estilos para la imagen en el encabezado */
+.logo img {
+    width: 6em;
+    /* Tamaño de la imagen */
+    height: auto;
+    margin: 1em;
+    /* Espacio entre la imagen y el texto */
+    border-radius:50% ;
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style-type: none;
+    /* Quita los puntos de la lista */
+    padding: 0;
+    /* Elimina el relleno */
+    margin-left: 150px;
+}
+
+nav ul li {
+    display: inline-block;
+    /* Alinea los elementos de la lista horizontalmente */
+    margin-right: 4em;
+    /* Espacio entre los elementos de la lista */
+    font-size: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    /* Quita el subrayado predeterminado de los enlaces */
+    color: #000;
+    /* Color de texto predeterminado */
+    padding: 5px 10px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+}
+
+nav ul li a:hover {
+    background-color: #2D4B73;
+    /* Cambia el color de fondo cuando el mouse está encima */
+    color: #fff;
+    /* Cambia el color del texto cuando el mouse está encima */
+}
+.random-color{
+    transition: color 0.18s ease; /* Transición suave entre colores */
+    text-align: center;
+}
+
+.SobreNosotros {
+    display: flex;
+    /* Utiliza flexbox */
+    justify-content: center;
+    margin: 20px 40px;
+}
+
+.SobreNosotros hr {
+    margin-bottom: 20px;
+    /* Espacio después de la línea horizontal */
+}
+
+.info-box {
+    width: 50%;
+    /* Divide el espacio en dos */
+    padding: 20px;
+    /* Espacio interno */
+    background-color: #f0f0f0;
+    /* Color de fondo del cuadro de información */
+    border-radius: 10px;
+    /* Bordes circulares */
+    padding: 20px;
+    /* Espacio interno */
+    margin: 10px;
+    text-align: center;
+
+}
+
+.info-box h2 {
+    margin-top: 0;
+    /* Elimina el margen superior del encabezado */
+    padding-bottom: 10px;
+    /* Espacio después del encabezado */
+    margin-top: 0;
+    /* Elimina el margen superior del encabezado */
+    padding-bottom: 10px;
+    /* Espacio después del encabezado */
+}
+
+.info-box p {
+    margin-top: 0;
+    /* Elimina el margen superior del párrafo */
+}
+
+  
