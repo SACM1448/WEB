@@ -25,5 +25,28 @@ function getRandomColor() {
   
     setInterval(generarColorAleatorio, 800); // Cambiar cada 5 segundos
   });
+  const imagesContainer = document.querySelector('.images');
+  const images = document.querySelectorAll('.images img');
+  const numImages = images.length;
+  const imageWidth = images[0].clientWidth;
+  let currentIndex = 0;
+  const slideWidth = imageWidth * 4; // Ancho total de las imágenes a mostrar
+  const speed = 1; // Velocidad de desplazamiento (en píxeles por fotograma)
+  
+  document.querySelector('.prev').addEventListener('click', () => {
+      currentIndex -= slideWidth;
+      if (currentIndex < 0) {
+          currentIndex = imageWidth * (numImages - 1);
+      }
+      imagesContainer.style.transform = `translateX(-${currentIndex}px)`;
+  });
+  
+  document.querySelector('.next').addEventListener('click', () => {
+      currentIndex += slideWidth;
+      if (currentIndex > imageWidth * (numImages - 1)) {
+          currentIndex = 0;
+      }
+      imagesContainer.style.transform = `translateX(-${currentIndex}px)`;
+  });
   
   

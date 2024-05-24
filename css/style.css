@@ -126,5 +126,50 @@ nav ul li a:hover {
     margin-top: 0;
     /* Elimina el margen superior del párrafo */
 }
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel h2{
+    text-align: center;
+}
+.images {
+    display: flex;
+    transition: transform 0.5s ease; 
+}
 
-  
+img {
+    width: calc(100%/4); /* Mostrar 4 imágenes alineadas en bloque */
+    height: auto;
+    border-radius: 50%;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+footer {
+    margin-top: 10%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    background-color: #000;
+}
