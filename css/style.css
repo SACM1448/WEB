@@ -1,5 +1,4 @@
-
- body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -40,6 +39,7 @@ nav ul {
 nav ul li {
     display: inline-block; /* Alinea los elementos de la lista horizontalmente */
     margin: 0.5em;
+    font-size: 25px;
 }
 
 nav ul li a {
@@ -47,7 +47,6 @@ nav ul li a {
     color: #000; /* Color de texto predeterminado */
     padding: 5px 10px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
-    font-size: 1em; /* Ajusta el tamaño del texto */
 }
 
 nav ul li a:hover {
@@ -99,7 +98,6 @@ nav ul li a:hover {
     }
 }
 
-
 .SobreNosotros {
     display: flex;
     /* Utiliza flexbox */
@@ -112,7 +110,7 @@ nav ul li a:hover {
     /* Espacio después de la línea horizontal */
 }
 
-.info-box {
+.info-box1 {
     width: 50%;
     /* Divide el espacio en dos */
     padding: 20px;
@@ -125,14 +123,23 @@ nav ul li a:hover {
     /* Espacio interno */
     margin: 10px;
     text-align: center;
-
+}
+.info-box {
+    width: 80%;
+    /* Divide el espacio en dos */
+    padding: 20px;
+    /* Espacio interno */
+    background-color: #f0f0f0;
+    /* Color de fondo del cuadro de información */
+    border-radius: 10px;
+    /* Bordes circulares */
+    padding: 20px;
+    /* Espacio interno */
+    margin: 2% 10% 2% 10%;
+    text-align: center;
 }
 
 .info-box h2 {
-    margin-top: 0;
-    /* Elimina el margen superior del encabezado */
-    padding-bottom: 10px;
-    /* Espacio después del encabezado */
     margin-top: 0;
     /* Elimina el margen superior del encabezado */
     padding-bottom: 10px;
@@ -143,18 +150,21 @@ nav ul li a:hover {
     margin-top: 0;
     /* Elimina el margen superior del párrafo */
 }
+
 .carousel {
     position: relative;
     max-width: 80%;
     margin: auto;
     overflow: hidden;
 }
-.carousel h2{
+
+.carousel h2 {
     text-align: center;
 }
+
 .images {
     display: flex;
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
 }
 
 img {
@@ -189,4 +199,16 @@ footer {
     color: white;
     font-size: 18px;
     background-color: #000;
+}
+
+.Texto1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Contacto {
+    background-color: antiquewhite;
+}
+
+.Text {
+    background-color: rgb(180, 255, 252);
 }
