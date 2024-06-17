@@ -30,7 +30,7 @@ function getRandomColor() {
   const numImages = images.length;
   const imageWidth = images[0].clientWidth;
   let currentIndex = 0;
-  const slideWidth = imageWidth * 4; // Ancho total de las imágenes a mostrar
+  const slideWidth = imageWidth * 3; // Ancho total de las imágenes a mostrar
   const speed = 1; // Velocidad de desplazamiento (en píxeles por fotograma)
   
   document.querySelector('.prev').addEventListener('click', () => {
