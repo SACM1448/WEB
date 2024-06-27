@@ -244,12 +244,13 @@ button {
 .container:hover .form-container {
   display: block;
 }
-.form-container input[type=text], .form-container input[type=email] {
+.form-container input[type=text], .form-container input[type=email], .form-container input[type=file] {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  border-radius: 4px;
 }
 .formulario_b{
   padding: 8px;
@@ -290,11 +291,19 @@ iframe {
   border: 10px;
   border-color: #000;
 }
-.espacio-fom img{
-  display: block;
+.espacio-fom{
+  width: 400px; 
+  height: 400px; 
   margin: 0 auto;
   padding: 20px;
-  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.espacio-fom img{
+  width: 100%;
+  height: 100%;
+  object-position: center;
   border-radius: 30%;
 }
 footer {
@@ -313,6 +322,7 @@ footer {
   display: flex;
   text-decoration: none;
   align-items: center;
+  justify-content: center;
   font-size: 30px;
 }
 

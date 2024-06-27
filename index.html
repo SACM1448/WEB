@@ -90,7 +90,8 @@
         <hr />
         <br />
         <p>
-          <i>En nuestra Tienda Diseño Ideal, la personalización la llevamos al
+          <i
+            >En nuestra Tienda Diseño Ideal, la personalización la llevamos al
             nivel más sencillo para su comodidad. Nos especializamos en
             transformar tus ideas en objetos únicos y personalizados que
             reflejan tu estilo y personalidad. Ya sea para un regalo especial,
@@ -183,7 +184,7 @@
       <div class="container">
         <button class="dropbtn">→</button>
         <div class="form-container">
-          <form action="#">
+          <form action="#" id="upload-form">
             <label class="label_" for="nombre">Nombre:</label>
             <br />
             <input
@@ -214,6 +215,9 @@
               required
             />
             <br /><br />
+            <label for="file-upload" class="file-label">Sube la imagen para tu diseño personalizado</label>
+            <input type="file" id="file-input" accept="image/*" required />
+            <br /><br />
             <button type="submit" class="formulario_b">Enviar</button>
           </form>
         </div>
@@ -232,7 +236,7 @@
       </div>
     </div>
     <div class="espacio-fom">
-      <img src="./assets/IMG/logo.png" alt="Logo compañía" />
+      <img id="preview-image" src="./assets/IMG/logo.png" alt="Logo compañía" />
     </div>
     <footer>
       <div class="contenedor1">

@@ -39,3 +39,52 @@ document.querySelector(".next").addEventListener("click", () => {
   }
   imagesContainer.style.transform = `translateX(-${currentIndex}px)`; // Aplicar el desplazamiento horizontal al contenedor de imágenes
 });
+
+document.getElementById('file-input').addEventListener('change', (event) => {
+  const fileInput = event.target;
+  const file = fileInput.files[0];
+  const previewImage = document.getElementById('preview-image');
+
+  if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+          previewImage.src = e.target.result;
+          previewImage.alt = "Imagen seleccionada";
+      };
+      reader.readAsDataURL(file);
+  }
+});
+
+document.getElementById('upload-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const fileInput = document.getElementById('file-input');
+  const file = fileInput.files[0];
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('upload_preset', 'presetImg');
+
+  try {
+      const response = await fetch(`https://api.cloudinary.com/v1_1/dddzywyaw/image/upload`, {
+          method: 'POST',
+          body: formData
+      });
+
+      if (!response.ok) {
+          throw new Error('Error en la subida de la imagen');
+      }
+
+      const data = await response.json();
+
+      // Mostrar mensaje emergente
+      alert('Datos enviados correctamente');
+
+      // Volver a mostrar el logo de la compañía
+      const previewImage = document.getElementById('preview-image');
+      previewImage.src = './assets/IMG/logo.png';
+      previewImage.alt = 'Logo compañía';
+  } catch (error) {
+      console.error('Error:', error);
+      alert('Error al enviar los datos');
+  }
+});
