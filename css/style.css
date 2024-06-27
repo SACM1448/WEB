@@ -215,17 +215,19 @@ button {
   right: 0;
   top: 50%;
 }
+
 .container-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.container{
+.container {
   position: relative;
   text-align: center;
 }
+
 .dropbtn {
-  background: linear-gradient(to right, #95eea1,#6ebce0 );
+  background: linear-gradient(to right, #95eea1, #6ebce0);
   color: rgb(255, 0, 0);
   padding: 16px;
   font-size: 16px;
@@ -233,18 +235,23 @@ button {
   border-color: #00000050;
   border-width: 1px;
 }
+
 .form-container {
   display: none;
   position: absolute;
-  background: linear-gradient(to right, #95eea1,#6ebce0 );
+  background: linear-gradient(to right, #95eea1, #6ebce0);
   min-width: 180px;
   padding: 12px 16px;
   z-index: 1;
 }
+
 .container:hover .form-container {
   display: block;
 }
-.form-container input[type=text], .form-container input[type=email], .form-container input[type=file] {
+
+.form-container input[type=text],
+.form-container input[type=email],
+.form-container input[type=file] {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
@@ -252,7 +259,8 @@ button {
   box-sizing: border-box;
   border-radius: 4px;
 }
-.formulario_b{
+
+.formulario_b {
   padding: 8px;
   width: 100%;
   border: none;
@@ -260,52 +268,76 @@ button {
   color: white;
 
 }
-.formulario_b:hover{
+
+.formulario_b:hover {
   background-color: #829fc2;
 }
 
-.input_{
-  background: linear-gradient(to right, #95eea1,#6ebce0 );
+.input_ {
+  background: linear-gradient(to right, #95eea1, #6ebce0);
   border: none;
   border-color: #00000000;
 }
 
-.label_{
+.label_ {
   font-size: 15px;
 }
+
 /*Mapa*/
 .map-container {
   display: none;
   position: absolute;
   left: -350px;
-  min-width:400px;
+  min-width: 400px;
   height: 250px;
   z-index: 1;
 }
+
 .container:hover .map-container {
   display: block;
 }
+
 iframe {
   width: 100%;
   height: 100%;
   border: 10px;
   border-color: #000;
 }
-.espacio-fom{
-  width: 400px; 
-  height: 400px; 
+
+.espacio-fom {
+  width: 400px;
+  height: 400px;
   margin: 0 auto;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.espacio-fom img{
+
+.espacio-fom img {
   width: 100%;
   height: 100%;
   object-position: center;
   border-radius: 30%;
 }
+
+.mensaje{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+.mensaje p{
+  width: 33.3%;
+  height: auto;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
 footer {
   width: 100%;
   background: #c1eaf5;
