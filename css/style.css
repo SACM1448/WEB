@@ -186,7 +186,7 @@ nav ul li a:hover {
 .images {
   display: flex;
   flex-direction: row;
-  height: 550px;
+  height: 32em;
   transition: transform 0.5s ease;
 }
 
@@ -233,11 +233,10 @@ button {
   padding: 16px;
   font-size: 2,5em;
   cursor: pointer;
-  border-color: #00000050;
+  border-color: #28282850;
   border-width: 1px;
   border-style: solid;
   border-radius: 10px;
-
 }
 
 .form-container {
@@ -263,7 +262,7 @@ button {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
-  border: 1px solid #a70b0b; /* Mantén el borde */
+  border: 1px solid #28282850; /* Mantén el borde */
   box-sizing: border-box;
   border-radius: 4px; /* Agrega bordes redondeados */
   font-family: 'Roboto', sans-serif; /* Cambia la fuente por Roboto */
@@ -304,9 +303,9 @@ button {
 .map-container {
   display: none;
   position: absolute;
-  left: -350px;
-  min-width: 400px;
-  height: 250px;
+  right: 0;
+  width: 14em;
+  height: 27.5em;
   z-index: 1;
 }
 
@@ -319,6 +318,7 @@ iframe {
   height: 100%;
   border: 10px;
   border-color: #000;
+  border-radius: 10px;
 }
 
 .espacio-fom {

@@ -1,3 +1,4 @@
+//header
 document.addEventListener("DOMContentLoaded", function () {
   let header = document.querySelector("header");
   let h1 = document.querySelector(".random-color");
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   setInterval(generarColorAleatorio, 800);
 });
+//carrusel
 // Seleccionar el contenedor de imágenes y todas las imágenes dentro de él
 // Obtener la cantidad total de imágenes
 // Obtener la cantidad total de imágenes
@@ -39,7 +41,7 @@ document.querySelector(".next").addEventListener("click", () => {
   }
   imagesContainer.style.transform = `translateX(-${indice}px)`; // Aplicar el desplazamiento horizontal al contenedor de imágenes
 });
-
+//subir imagen
 function mostrarMensaje(texto) {
   const mensaje = document.getElementById('mensaje');
   mensaje.textContent = texto;
