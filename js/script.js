@@ -41,65 +41,27 @@ document.querySelector(".next").addEventListener("click", () => {
   }
   imagesContainer.style.transform = `translateX(-${indice}px)`; // Aplicar el desplazamiento horizontal al contenedor de imágenes
 });
-//subir imagen
 function mostrarMensaje(texto) {
-  const mensaje = document.getElementById('mensaje');
+  const mensaje = document.getElementById("mensaje");
   mensaje.textContent = texto;
 
   setTimeout(() => {
-      mensaje.textContent = '';
+    mensaje.textContent = "";
   }, 5000);
 }
 
-document.getElementById('file-input').addEventListener('change', (event) => {
+document.getElementById("file-input").addEventListener("change", (event) => {
   const fileInput = event.target;
   const file = fileInput.files[0];
-  const previewImage = document.getElementById('preview-image');
+  const previewImage = document.getElementById("preview-image");
 
   if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-          previewImage.src = e.target.result;
-          previewImage.alt = "Imagen seleccionada";
-      };
-      reader.readAsDataURL(file);
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      previewImage.src = e.target.result;
+      previewImage.alt = "Imagen seleccionada";
+    };
+    reader.readAsDataURL(file);
   }
 });
-
-document.getElementById('upload-form').addEventListener('submit', async (event) => {
-  event.preventDefault();
-
-  const fileInput = document.getElementById('file-input');
-  const file = fileInput.files[0];
-  const formData = new FormData();
-  formData.append('file', file);
-  formData.append('upload_preset', 'presetImg');
-
-  try {
-      const response = await fetch(`https://api.cloudinary.com/v1_1/dddzywyaw/image/upload`, {
-          method: 'POST',
-          body: formData
-      });
-
-      if (!response.ok) {
-          throw new Error('Error en la subida de la imagen');
-      }
-
-      const data = await response.json();
-      
-    // Llama a la función para mostrar el mensaje
-    mostrarMensaje('Datos enviados correctamente');
-      // Volver a mostrar el logo de la compañía
-      const previewImage = document.getElementById('preview-image');
-      previewImage.src = './assets/IMG/logo.png';
-      previewImage.alt = 'Logo compañía';
-      fileInput.value = '';
-  } catch (error) {
-      console.error('Error:', error);
-      mostrarMensaje('Error al enviar los datos');
-      const previewImage = document.getElementById('preview-image');
-      previewImage.src = './assets/IMG/logo.png';
-      previewImage.alt = 'Logo compañía';
-      fileInput.value = '';
-  }
-});
+export { mostrarMensaje };
